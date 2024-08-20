@@ -1,16 +1,10 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from utils.deck_code_loader import deck_code_to_deck_str
+from model.deck import Deck
+from agents.hands_agent import HandAgent
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+ deck = "EYCQyBwMA5BRySITEnEgOHETB4AQ3oMPCFAx9TMPE2Ax/jUPE+FhAzYQDDEgTMIUDMAA"
+ deck = Deck(deck_code_to_deck_str(deck))
+ a = HandAgent(deck)
+ print(deck)
