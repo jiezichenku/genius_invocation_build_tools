@@ -13,8 +13,12 @@ class Card(object):
         self.is_legend = False
         if "GCG_TAG_LEGEND" in self.data["tags"]:
             self.is_legend = True
-        self.valuable = False
-        self.playable = False
+        self.value = 2  # 0: t1会留会打 1: t1不留会打 2: t1不留不打(default)
+        self.draw_after_play = 0
+        if self.id in [332004]:
+            self.draw_after_play = 2
+        if self.id in [332032]:
+            self.draw_after_play = 4
 
     def __str__(self):
         return f"id: {self.id}, name: {self.name}"

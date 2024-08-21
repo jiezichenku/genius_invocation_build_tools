@@ -39,6 +39,6 @@ def deck_code_to_deck_str(deck_code):
         if 0 < x <= len(name_map):
             if x - 1 in characters_idx:
                 results["characters"].append(Character(x))
-        else:
-            results["cards"].append(Card(x))
+            else:
+                results["cards"].append(Card(x))
     return results
